@@ -37,7 +37,7 @@ print(data["widget"]["image"]["src"])
 # converting py obj to json
 del data["widget"]["text"]["style"]     # deleting style form text from widget
 
-new_json_obj = json.dumps(data)         # json.dumps converts py obj back to json
+new_json_obj = json.dumps(data, sort_keys=True)         # json.dumps converts py obj back to json
 print(data)
 
 
