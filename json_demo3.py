@@ -6,7 +6,11 @@ url = 'https://api.spoonacular.com/recipes/search'
 params = {'query': 'cheese', 'number': 2, 'apiKey': api_key}
 
 respond = requests.get(url, params=params)
-
 data = respond.json()
 
-print(json.dumps(data, indent=2))
+# print(json.dumps(data, indent=2))
+
+for item in data['results']:
+    print(item['title'])
+
+
